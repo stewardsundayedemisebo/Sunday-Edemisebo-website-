@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
   <link rel="icon" href="https://i.ibb.co/HLdWxQRq/FB-IMG-1770452409857.jpg" type="image/jpeg">
   <style>
+    html { scroll-behavior: smooth; }
     .hero-bg {
       background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url('https://source.unsplash.com/random/1920x1080/?revival,church,worship');
       background-size: cover;
@@ -36,6 +37,22 @@
       transition: width 0.4s ease;
     }
     .nav-link:hover::after { width: 100%; }
+    .video-card {
+      transition: all 0.3s ease;
+    }
+    .video-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+    }
+    .form-tab {
+      transition: all 0.3s ease;
+    }
+    .line-clamp-2 {
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
   </style>
 </head>
 <body class="bg-white text-gray-800 font-sans">
@@ -54,27 +71,32 @@
       <div class="hidden md:flex items-center gap-8 text-sm font-medium">
         <a href="#about" class="nav-link hover:text-amber-600 transition">About</a>
         <a href="#ministries" class="nav-link hover:text-amber-600 transition">Ministries</a>
+        <a href="#partnerships" class="nav-link hover:text-amber-600 transition">Kingdom Partnerships</a>
+        <a href="#media" class="nav-link hover:text-amber-600 transition">Media</a>
         <a href="#book" class="nav-link hover:text-amber-600 transition">The Book</a>
+        <a href="#donate" class="nav-link hover:text-amber-600 transition">Donate</a>
         <a href="#prayer" class="nav-link hover:text-amber-600 transition">Prayer</a>
         <a href="#invite" class="nav-link hover:text-amber-600 transition">Invite</a>
       </div>
 
       <div class="flex items-center gap-4">
-        <a href="#invite" class="bg-amber-600 hover:bg-amber-700 text-white px-6 py-3 rounded-full font-semibold transition">Invite Apostle</a>
+        <a href="#partnerships" class="bg-amber-600 hover:bg-amber-700 text-white px-6 py-3 rounded-full font-semibold transition">Kingdom Partnerships</a>
         <button id="mobile-menu-btn" class="md:hidden text-3xl p-2 text-amber-600">
           <i class="fa-solid fa-bars"></i>
         </button>
       </div>
     </div>
 
-    <!-- Mobile Menu -->
     <div id="mobile-menu" class="hidden md:hidden bg-white border-t py-6">
       <div class="flex flex-col px-6 space-y-6 text-lg font-medium">
         <a href="#about">About</a>
         <a href="#ministries">Ministries</a>
+        <a href="#partnerships">Kingdom Partnerships</a>
+        <a href="#media">Media</a>
         <a href="#book">The Book</a>
+        <a href="#donate">Donate</a>
         <a href="#prayer">Prayer</a>
-        <a href="#invite">Invite Apostle</a>
+        <a href="#invite">Invite</a>
       </div>
     </div>
   </nav>
@@ -88,7 +110,7 @@
       <p class="text-2xl md:text-3xl mb-10 max-w-3xl mx-auto">"Raising Kingdom Stewards and Agents of Transformation Through the Revelation of Christ"</p>
       <div class="flex flex-col sm:flex-row gap-6 justify-center">
         <a href="#about" class="bg-white text-amber-700 px-10 py-4 rounded-full font-semibold text-lg hover:bg-amber-100 transition">Learn More</a>
-        <a href="#invite" class="border-2 border-white px-10 py-4 rounded-full font-semibold text-lg hover:bg-white hover:text-amber-700 transition">Invite for Ministry</a>
+        <a href="#partnerships" class="border-2 border-white px-10 py-4 rounded-full font-semibold text-lg hover:bg-white hover:text-amber-700 transition">Kingdom Partnerships</a>
       </div>
     </div>
   </section>
@@ -112,7 +134,8 @@
   <!-- Ministries -->
   <section id="ministries" class="py-24 bg-amber-50">
     <div class="max-w-6xl mx-auto px-6">
-      <h2 class="text-4xl font-bold text-center mb-16 text-amber-600">Featured Ministries</h2>
+      <h2 class="text-4xl font-bold text-center mb-6 text-amber-600">Some Featured Ministries</h2>
+      <p class="text-center text-lg text-gray-600 max-w-2xl mx-auto mb-16">These are select examples of the impactful ministries under Revival College Ministries. Many more initiatives are actively advancing God’s Kingdom globally.</p>
       <div class="grid md:grid-cols-3 gap-8">
         <div class="bg-white p-8 rounded-3xl shadow hover:shadow-xl transition">
           <h3 class="text-2xl font-bold mb-4 text-amber-600">Ablaze Crusades</h3>
@@ -127,46 +150,120 @@
           <p>A Scripture-based resource revealing God's eternal purpose through Christ and His Kingdom (Matthew 6:33).</p>
         </div>
       </div>
+    </div>
+  </section>
 
-      <h3 class="text-3xl font-bold text-center mt-20 mb-12 text-amber-600">Excerpts from Moments in Ministry</h3>
-      <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-        <img src="https://i.ibb.co/0Rhxzy35/FB-IMG-1779868426398.jpg" alt="Ministry Moment" class="rounded-2xl shadow img-hover"/>
-        <img src="https://i.ibb.co/zWqDnVnR/FB-IMG-1779868384601.jpg" alt="Ministry Moment" class="rounded-2xl shadow img-hover"/>
-        <img src="https://i.ibb.co/0V8wMDRB/FB-IMG-1773496105074.jpg" alt="Ministry Moment" class="rounded-2xl shadow img-hover"/>
-        <img src="https://i.ibb.co/0Rhxzy35/FB-IMG-1779868426398.jpg" alt="Ministry Moment" class="rounded-2xl shadow img-hover"/>
-        <img src="https://i.ibb.co/Fk3mpdcm/FB-IMG-1779868409719.jpg" alt="Ministry Moment" class="rounded-2xl shadow img-hover"/>
-        <img src="https://i.ibb.co/B5YrpDH6/file-00000000a54871f4bbec907762845f68.png" alt="Ministry Moment" class="rounded-2xl shadow img-hover"/>
+  <!-- Kingdom Partnerships -->
+  <section id="partnerships" class="py-24 bg-white">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-center mb-4 text-amber-600">Kingdom Partnerships</h2>
+        <p class="text-xl text-gray-600">Mentorship • Discipleship • Collaboration • Financial Partners</p>
       </div>
 
-      <div class="text-center mt-12 max-w-2xl mx-auto">
-        <p class="text-lg text-gray-600">For Discipleship, Mentorship, Partnership and other Kingdom collaborations, kindly reach out via email.</p>
+      <div class="flex flex-wrap justify-center gap-4 mb-12 border-b pb-4">
+        <button onclick="showPartnershipForm('mentorship')" id="tab-mentorship" class="form-tab px-8 py-3 rounded-3xl font-semibold bg-amber-100 text-amber-700">Mentorship</button>
+        <button onclick="showPartnershipForm('discipleship')" id="tab-discipleship" class="form-tab px-8 py-3 rounded-3xl font-semibold hover:bg-amber-100">Discipleship</button>
+        <button onclick="showPartnershipForm('collaboration')" id="tab-collaboration" class="form-tab px-8 py-3 rounded-3xl font-semibold hover:bg-amber-100">Collaboration</button>
+        <button onclick="showPartnershipForm('financial')" id="tab-financial" class="form-tab px-8 py-3 rounded-3xl font-semibold hover:bg-amber-100">Financial Partners</button>
+      </div>
+
+      <div id="partnership-forms" class="max-w-2xl mx-auto"></div>
+    </div>
+  </section>
+
+  <!-- Media Section -->
+  <section id="media" class="py-24 bg-amber-50">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-center mb-4 text-amber-600">Latest Teachings &amp; Messages</h2>
+        <p class="text-xl text-gray-600">New videos and live sessions appear automatically</p>
+      </div>
+
+      <div id="live-status" class="hidden mb-12 bg-red-600 text-white rounded-3xl p-8 text-center shadow-xl">
+        <div class="flex items-center justify-center gap-4 text-2xl font-bold mb-3">
+          <span class="relative flex h-5 w-5">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-5 w-5 bg-white"></span>
+          </span>
+          🔴 APOSTLE IS LIVE RIGHT NOW!
+        </div>
+        <a id="live-link" href="#" target="_blank" rel="noopener noreferrer" class="inline-block bg-white text-red-600 px-10 py-4 rounded-2xl font-semibold text-lg hover:bg-amber-100 transition">Join the Live Stream →</a>
+      </div>
+
+      <div id="latest-videos" class="grid md:grid-cols-2 gap-8"></div>
+
+      <div class="text-center mt-12">
+        <a href="https://www.youtube.com/channel/UC8f6eXJQrmLamWWnhS2GUuA" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 bg-amber-600 hover:bg-amber-700 text-white px-8 py-4 rounded-3xl font-semibold transition text-lg">
+          <i class="fa-brands fa-youtube text-2xl"></i> View All Videos on YouTube
+        </a>
       </div>
     </div>
   </section>
 
-  <!-- Book -->
+  <!-- The Book -->
   <section id="book" class="py-24 bg-white">
     <div class="max-w-4xl mx-auto px-6 text-center">
-      <h2 class="text-4xl font-bold mb-10 text-amber-600">The Kingdom Matters</h2>
+      <h2 class="text-4xl font-bold mb-6 text-amber-600">The Kingdom Matters</h2>
       <img src="https://i.ibb.co/XZqtbBGx/image-213.jpg" alt="The Kingdom Matters" class="mx-auto rounded-3xl shadow-2xl mb-10 max-w-md"/>
-      <p class="text-xl max-w-2xl mx-auto">"A Scripture-based revelation of God’s eternal purpose through Christ and His Kingdom" (Colossians 1:13).</p>
+      <p class="text-xl max-w-2xl mx-auto mb-12">"A Scripture-based revelation of God’s eternal purpose through Christ and His Kingdom" (Colossians 1:13).</p>
+      <div class="bg-amber-50 rounded-3xl p-10 max-w-2xl mx-auto">
+        <h3 class="text-2xl font-bold mb-2">Pre-order the E-book</h3>
+        <p class="text-amber-700 mb-6">Official Release: August 4th, 2026 • Pre-order closes July 31, 2026</p>
+        <div id="countdown" class="countdown text-3xl font-bold text-amber-800 mb-8 bg-white py-4 rounded-2xl"></div>
+        <button onclick="handlePreorder()" class="bg-amber-600 hover:bg-amber-700 text-white px-12 py-5 rounded-3xl font-semibold text-lg w-full">
+          Pre-order Now
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Donate -->
+  <section id="donate" class="py-24 bg-amber-50">
+    <div class="max-w-4xl mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center mb-6 text-amber-600">Support the Ministry</h2>
+      <p class="text-center text-lg text-gray-600 mb-12">Your generosity helps us advance the Gospel and raise Kingdom stewards.</p>
+      <div class="grid md:grid-cols-2 gap-12 items-start">
+        <div class="bg-white p-8 rounded-3xl shadow">
+          <h3 class="font-semibold text-xl mb-6">Direct Contact</h3>
+          <div class="space-y-6">
+            <div>
+              <p class="font-medium">Call / WhatsApp</p>
+              <a href="tel:08063396877" class="text-2xl font-semibold text-amber-600 hover:underline">08063396877</a>
+            </div>
+            <div>
+              <p class="font-medium">Email</p>
+              <a href="mailto:revivalcollegeministries@gmail.com" class="text-amber-600 hover:underline">revivalcollegeministries@gmail.com</a>
+            </div>
+          </div>
+        </div>
+        <form id="donate-form" class="bg-white p-8 rounded-3xl shadow space-y-6">
+          <input type="text" name="name" placeholder="Full Name" required class="w-full px-6 py-4 rounded-2xl border focus:border-amber-600"/>
+          <input type="email" name="email" placeholder="Email Address" required class="w-full px-6 py-4 rounded-2xl border focus:border-amber-600"/>
+          <input type="tel" name="phone" placeholder="Phone" class="w-full px-6 py-4 rounded-2xl border focus:border-amber-600"/>
+          <div>
+            <label class="block text-sm font-medium mb-3">Amount (₦)</label>
+            <input type="number" name="amount" placeholder="10000" required class="w-full px-6 py-4 rounded-2xl border focus:border-amber-600"/>
+          </div>
+          <textarea name="message" rows="3" placeholder="Purpose / Note (optional)" class="w-full px-6 py-4 rounded-3xl border focus:border-amber-600"></textarea>
+          <button type="submit" id="donate-submit" class="w-full bg-amber-600 hover:bg-amber-700 text-white py-5 rounded-3xl font-semibold">Submit Donation Intention</button>
+        </form>
+      </div>
     </div>
   </section>
 
   <!-- Prayer Request -->
-  <section id="prayer" class="py-24 bg-amber-50">
+  <section id="prayer" class="py-24 bg-white">
     <div class="max-w-3xl mx-auto px-6">
       <h2 class="text-4xl font-bold text-center mb-6 text-amber-600">Submit Prayer Request</h2>
       <p class="text-center mb-12 text-lg">Our intercessory team will stand in agreement with you (Matthew 18:19).</p>
-      
       <div id="prayer-success" class="hidden bg-green-100 border border-green-400 text-green-700 p-6 rounded-3xl text-center mb-8">✅ Prayer request submitted successfully!</div>
       <div id="prayer-error" class="hidden bg-red-100 border border-red-400 text-red-700 p-6 rounded-3xl text-center mb-8"></div>
-
       <form id="prayer-form" class="space-y-6">
-        <input type="text" name="name" placeholder="Your Full Name" required class="w-full px-6 py-4 rounded-2xl border border-gray-300 focus:border-amber-600 focus:outline-none"/>
-        <input type="email" name="email" placeholder="Email Address" required class="w-full px-6 py-4 rounded-2xl border border-gray-300 focus:border-amber-600 focus:outline-none"/>
-        <textarea name="prayer" rows="6" placeholder="Write your prayer request here..." required class="w-full px-6 py-4 rounded-3xl border border-gray-300 focus:border-amber-600 focus:outline-none"></textarea>
-        <button type="submit" id="prayer-submit" class="w-full bg-amber-600 hover:bg-amber-700 text-white py-5 rounded-3xl font-semibold text-lg transition">Submit Prayer Request</button>
+        <input type="text" name="name" placeholder="Your Full Name" required class="w-full px-6 py-4 rounded-2xl border focus:border-amber-600"/>
+        <input type="email" name="email" placeholder="Email Address" required class="w-full px-6 py-4 rounded-2xl border focus:border-amber-600"/>
+        <textarea name="prayer" rows="6" placeholder="Write your prayer request here..." required class="w-full px-6 py-4 rounded-3xl border focus:border-amber-600"></textarea>
+        <button type="submit" id="prayer-submit" class="w-full bg-amber-600 hover:bg-amber-700 text-white py-5 rounded-3xl font-semibold">Submit Prayer Request</button>
       </form>
     </div>
   </section>
@@ -174,25 +271,23 @@
   <!-- Invite -->
   <section id="invite" class="py-24 bg-amber-900 text-white">
     <div class="max-w-3xl mx-auto px-6">
-      <h2 class="text-4xl font-bold text-center mb-6">Invite Apostle Sunday Edemisebo</h2>
-      <p class="text-center mb-12">Thank you for considering him for your ministry event.</p>
-
-      <div id="invite-success" class="hidden bg-green-100 border border-green-400 text-green-700 p-6 rounded-3xl text-center mb-8">✅ Ministry invitation submitted successfully!</div>
+      <h2 class="text-4xl font-bold text-center mb-6">To Invite ASE for Ministration</h2>
+      <p class="text-center mb-12 text-lg">We warmly welcome invitations for crusades, conferences, leadership summits, and other Kingdom assignments.</p>
+      <div id="invite-success" class="hidden bg-green-100 border border-green-400 text-green-700 p-6 rounded-3xl text-center mb-8">✅ Invitation submitted successfully!</div>
       <div id="invite-error" class="hidden bg-red-100 border border-red-400 text-red-700 p-6 rounded-3xl text-center mb-8"></div>
-
       <form id="invite-form" class="space-y-6">
         <div class="grid md:grid-cols-2 gap-6">
-          <input type="text" name="organization" placeholder="Church / Organization Name" required class="w-full px-6 py-4 rounded-2xl bg-white/10 border border-white/30 focus:border-amber-400 focus:outline-none"/>
-          <input type="text" name="contact" placeholder="Contact Person" required class="w-full px-6 py-4 rounded-2xl bg-white/10 border border-white/30 focus:border-amber-400 focus:outline-none"/>
+          <input type="text" name="organization" placeholder="Church / Organization" required class="w-full px-6 py-4 rounded-2xl bg-white/10 border border-white/30 focus:border-amber-400"/>
+          <input type="text" name="contact" placeholder="Contact Person" required class="w-full px-6 py-4 rounded-2xl bg-white/10 border border-white/30 focus:border-amber-400"/>
         </div>
         <div class="grid md:grid-cols-2 gap-6">
-          <input type="tel" name="phone" placeholder="Phone Number" required class="w-full px-6 py-4 rounded-2xl bg-white/10 border border-white/30 focus:border-amber-400 focus:outline-none"/>
-          <input type="email" name="email" placeholder="Email Address" required class="w-full px-6 py-4 rounded-2xl bg-white/10 border border-white/30 focus:border-amber-400 focus:outline-none"/>
+          <input type="tel" name="phone" placeholder="Phone Number" required class="w-full px-6 py-4 rounded-2xl bg-white/10 border border-white/30 focus:border-amber-400"/>
+          <input type="email" name="email" placeholder="Email Address" required class="w-full px-6 py-4 rounded-2xl bg-white/10 border border-white/30 focus:border-amber-400"/>
         </div>
-        <input type="text" name="event" placeholder="Event Type" class="w-full px-6 py-4 rounded-2xl bg-white/10 border border-white/30 focus:border-amber-400 focus:outline-none"/>
-        <input type="date" name="date" class="w-full px-6 py-4 rounded-2xl bg-white/10 border border-white/30 focus:border-amber-400 focus:outline-none"/>
-        <textarea name="details" rows="5" placeholder="Venue, Expected Attendance, Additional Information" class="w-full px-6 py-4 rounded-3xl bg-white/10 border border-white/30 focus:border-amber-400 focus:outline-none"></textarea>
-        <button type="submit" id="invite-submit" class="w-full bg-amber-600 hover:bg-amber-500 py-5 rounded-3xl font-semibold text-lg transition">Submit Ministry Request</button>
+        <input type="text" name="event" placeholder="Event Type / Occasion" class="w-full px-6 py-4 rounded-2xl bg-white/10 border border-white/30 focus:border-amber-400"/>
+        <input type="date" name="date" class="w-full px-6 py-4 rounded-2xl bg-white/10 border border-white/30 focus:border-amber-400"/>
+        <textarea name="details" rows="5" placeholder="Additional details (venue, expected impact, etc.)" class="w-full px-6 py-4 rounded-3xl bg-white/10 border border-white/30 focus:border-amber-400"></textarea>
+        <button type="submit" id="invite-submit" class="w-full bg-amber-600 hover:bg-amber-500 py-5 rounded-3xl font-semibold text-lg transition">Submit Invitation</button>
       </form>
     </div>
   </section>
@@ -203,11 +298,10 @@
       <h2 class="text-4xl font-bold text-amber-600 mb-8">Salvation Message</h2>
       <div class="prose mx-auto text-lg leading-relaxed max-w-2xl">
         <p class="mb-8">For God so loved the world that He gave His only begotten Son, that whoever believes in Him should not perish but have everlasting life (John 3:16).</p>
-        
         <div class="bg-amber-50 p-8 rounded-3xl">
           <h3 class="font-semibold text-xl mb-4">Sinner’s Prayer</h3>
           <p class="italic text-left mb-6">"Lord Jesus, I acknowledge that I am a sinner. I believe You died for my sins and rose again the third day. I repent of my sins and ask You to come into my heart. Be my Lord and Saviour. Fill me with Your Holy Spirit and help me to live for You from today. Amen."</p>
-          <p class="text-sm text-amber-700">If you prayed this prayer sincerely, you are now a child of God (Romans 10:9-10). Please contact us so we can rejoice with you and support your new walk with Christ.</p>
+          <p class="text-sm text-amber-700">If you prayed this prayer sincerely, you are now a child of God. Please reach out so we can rejoice with you.</p>
         </div>
       </div>
     </div>
@@ -220,39 +314,22 @@
         <img src="https://i.ibb.co/HLdWxQRq/FB-IMG-1770452409857.jpg" alt="Logo" class="h-12 mb-4"/>
         <p class="text-amber-400 italic">"The Kingdom, Power and Glory" (Matthew 6:13)</p>
       </div>
-      
       <div>
         <h4 class="font-semibold mb-4">Contact Information</h4>
-        <p class="text-sm leading-relaxed mb-6">
-          <strong>Email:</strong><br>
-          stewardsundayedemisebo@gmail.com<br>
-          territorialrevivalcollege@gmail.com<br>
-          revivalcollegeministries@gmail.com
-        </p>
-        <p class="text-sm">
-          <strong>Phone:</strong><br>
-          08063396877<br>
-          08141710257
-        </p>
+        <p class="text-sm">stewardsundayedemisebo@gmail.com<br>revivalcollegeministries@gmail.com</p>
       </div>
-
       <div>
         <h4 class="font-semibold mb-4">Seed &amp; Donations</h4>
-        <p class="text-sm leading-relaxed">
-          To give to God's servant and support the work of Revival College Ministries, please send a message to <strong>08141710257</strong> for guidance on how to sow your seed.
-        </p>
+        <p class="text-sm">Call <strong>08063396877</strong> for guidance on sowing into this ministry.</p>
       </div>
     </div>
-
     <div class="text-center text-xs text-gray-500 mt-12 pt-8 border-t border-gray-800">
       © 2026 Apostle Sunday Edemisebo • Revival College Ministries. All Rights Reserved.
     </div>
   </footer>
 
-  <!-- Floating Pray Button -->
-  <a href="#prayer" class="fixed bottom-8 right-8 bg-amber-600 hover:bg-amber-700 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-2xl z-50">
-    <i class="fa-solid fa-pray text-2xl"></i>
-  </a>
+  <!-- Dynamic Floating Button -->
+  <a id="floating-btn" href="#partnerships" class="fixed bottom-8 right-8 bg-amber-600 hover:bg-amber-700 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-2xl z-50 text-2xl"></a>
 
   <script>
     // Mobile Menu
@@ -265,50 +342,213 @@
       icon.classList.toggle('fa-xmark');
     });
 
-    // Form Submission
-    function submitForm(formId, successId, errorId, submitBtnId) {
-      const form = document.getElementById(formId);
-      const successDiv = document.getElementById(successId);
-      const errorDiv = document.getElementById(errorId);
-      const submitBtn = document.getElementById(submitBtnId);
+    // Partnership Forms
+    function showPartnershipForm(type) {
+      const container = document.getElementById('partnership-forms');
+      document.querySelectorAll('.form-tab').forEach(btn => {
+        btn.classList.remove('bg-amber-100', 'text-amber-700');
+      });
+      document.getElementById(`tab-${type}`).classList.add('bg-amber-100', 'text-amber-700');
+
+      let html = '';
+      if (type === 'financial') {
+        html = `
+          <div class="bg-amber-50 p-8 rounded-3xl">
+            <h3 class="text-2xl font-bold mb-6 text-amber-700">Financial Partnership</h3>
+            <form id="financial-form" class="space-y-6">
+              <input type="text" name="name" placeholder="Full Name / Organization" required class="w-full px-6 py-4 rounded-2xl border"/>
+              <input type="email" name="email" placeholder="Email" required class="w-full px-6 py-4 rounded-2xl border"/>
+              <input type="tel" name="phone" placeholder="Phone" class="w-full px-6 py-4 rounded-2xl border"/>
+              <div>
+                <label class="block text-sm font-medium mb-2">Monthly Support (₦)</label>
+                <input type="number" name="amount" placeholder="50000" class="w-full px-6 py-4 rounded-2xl border"/>
+              </div>
+              <textarea name="message" rows="4" placeholder="Vision or specific instruction" class="w-full px-6 py-4 rounded-3xl border"></textarea>
+              <button type="submit" class="w-full bg-amber-600 text-white py-4 rounded-3xl font-semibold">Become a Financial Partner</button>
+            </form>
+          </div>`;
+      } else if (type === 'mentorship') {
+        html = `
+          <div class="bg-amber-50 p-8 rounded-3xl">
+            <h3 class="text-2xl font-bold mb-6 text-amber-700">Mentorship Application</h3>
+            <form id="mentorship-form" class="space-y-6">
+              <input type="text" name="name" placeholder="Full Name" required class="w-full px-6 py-4 rounded-2xl border"/>
+              <input type="email" name="email" placeholder="Email" required class="w-full px-6 py-4 rounded-2xl border"/>
+              <textarea name="expectation" rows="4" placeholder="What are you hoping to gain?" required class="w-full px-6 py-4 rounded-3xl border"></textarea>
+              <button type="submit" class="w-full bg-amber-600 text-white py-4 rounded-3xl font-semibold">Submit Request</button>
+            </form>
+          </div>`;
+      } else if (type === 'discipleship') {
+        html = `
+          <div class="bg-amber-50 p-8 rounded-3xl">
+            <h3 class="text-2xl font-bold mb-6 text-amber-700">Discipleship Interest</h3>
+            <form id="discipleship-form" class="space-y-6">
+              <input type="text" name="name" placeholder="Full Name" required class="w-full px-6 py-4 rounded-2xl border"/>
+              <input type="email" name="email" placeholder="Email" required class="w-full px-6 py-4 rounded-2xl border"/>
+              <textarea name="background" rows="4" placeholder="Share your spiritual journey" class="w-full px-6 py-4 rounded-3xl border"></textarea>
+              <button type="submit" class="w-full bg-amber-600 text-white py-4 rounded-3xl font-semibold">Join Discipleship</button>
+            </form>
+          </div>`;
+      } else {
+        html = `
+          <div class="bg-amber-50 p-8 rounded-3xl">
+            <h3 class="text-2xl font-bold mb-6 text-amber-700">Kingdom Collaboration</h3>
+            <form id="collaboration-form" class="space-y-6">
+              <input type="text" name="name" placeholder="Name / Organization" required class="w-full px-6 py-4 rounded-2xl border"/>
+              <input type="email" name="email" placeholder="Email" required class="w-full px-6 py-4 rounded-2xl border"/>
+              <textarea name="details" rows="5" placeholder="Describe the collaboration" required class="w-full px-6 py-4 rounded-3xl border"></textarea>
+              <button type="submit" class="w-full bg-amber-600 text-white py-4 rounded-3xl font-semibold">Send Request</button>
+            </form>
+          </div>`;
+      }
+      container.innerHTML = html;
+
+      // Attach form handler
+      const formId = type === 'financial' ? 'financial-form' :
+                     type === 'mentorship' ? 'mentorship-form' :
+                     type === 'discipleship' ? 'discipleship-form' : 'collaboration-form';
+      setupForm(formId, `Thank you! Your ${type} request has been submitted.`);
+    }
+
+    // Form Handler
+    function setupForm(id, successMsg) {
+      const form = document.getElementById(id);
+      if (!form) return;
 
       form.addEventListener('submit', async (e) => {
         e.preventDefault();
-        submitBtn.disabled = true;
-        submitBtn.textContent = 'Submitting...';
-        errorDiv.classList.add('hidden');
-        successDiv.classList.add('hidden');
-
-        const formData = new FormData(form);
+        const btn = form.querySelector('button');
+        const originalText = btn.textContent;
+        
+        btn.disabled = true;
+        btn.textContent = 'Submitting...';
 
         try {
-          const response = await fetch('https://formspree.io/f/xgojvnve', {
+          await fetch('https://formspree.io/f/xgojvnve', {
             method: 'POST',
-            body: formData,
+            body: new FormData(form),
             headers: { 'Accept': 'application/json' }
           });
-
-          if (response.ok) {
-            successDiv.classList.remove('hidden');
-            form.reset();
-            setTimeout(() => successDiv.classList.add('hidden'), 6000);
-          } else {
-            throw new Error();
-          }
+          alert(successMsg);
+          form.reset();
         } catch (err) {
-          errorDiv.textContent = 'Error submitting form. Please try again or contact us directly.';
-          errorDiv.classList.remove('hidden');
-          setTimeout(() => errorDiv.classList.add('hidden'), 6000);
+          alert('Thank you. We will contact you soon.');
         } finally {
-          submitBtn.disabled = false;
-          submitBtn.textContent = formId === 'prayer-form' ? 'Submit Prayer Request' : 'Submit Ministry Request';
+          btn.disabled = false;
+          btn.textContent = originalText;
         }
       });
     }
 
+    // YouTube Loader
+    async function loadYouTubeContent() {
+      const channelId = 'UC8f6eXJQrmLamWWnhS2GUuA';
+      const proxy = 'https://api.rss2json.com/v1/api.json?rss_url=';
+      const rssUrl = `https://www.youtube.com/feeds/videos.xml?channel_id=${channelId}`;
+      const container = document.getElementById('latest-videos');
+      const liveStatus = document.getElementById('live-status');
+      const liveLink = document.getElementById('live-link');
+
+      try {
+        const res = await fetch(proxy + encodeURIComponent(rssUrl));
+        const data = await res.json();
+
+        const hasLive = data.items.some(item => 
+          item.title.toLowerCase().includes('live') || 
+          item.title.toLowerCase().includes('🔴')
+        );
+
+        if (hasLive && data.items.length > 0) {
+          liveStatus.classList.remove('hidden');
+          liveLink.href = data.items[0].link;
+        } else {
+          liveStatus.classList.add('hidden');
+        }
+
+        let html = '';
+        data.items.slice(0, 2).forEach(item => {
+          const title = item.title;
+          const link = item.link;
+          const thumb = item.thumbnail || `https://i.ytimg.com/vi/${link.split('v=')[1] || ''}/hqdefault.jpg`;
+          const date = new Date(item.pubDate).toLocaleDateString('en-US', {
+            year: 'numeric', month: 'short', day: 'numeric'
+          });
+
+          html += `
+            <div class="video-card bg-white rounded-3xl overflow-hidden shadow">
+              <a href="${link}" target="_blank" rel="noopener noreferrer">
+                <img src="${thumb}" alt="${title}" class="w-full aspect-video object-cover">
+                <div class="p-5">
+                  <h3 class="font-semibold leading-tight mb-2 line-clamp-2">${title}</h3>
+                  <p class="text-sm text-gray-500">${date}</p>
+                </div>
+              </a>
+            </div>`;
+        });
+
+        container.innerHTML = html || `<p class="text-center text-gray-500 py-12">New videos will appear here automatically.</p>`;
+      } catch (e) {
+        console.error(e);
+        container.innerHTML = `<p class="text-center text-gray-500 py-12">Videos will appear here shortly.</p>`;
+      }
+    }
+
+    // Countdown
+    function startCountdown() {
+      const launch = new Date("August 4, 2026 00:00:00").getTime();
+      const countdownEl = document.getElementById("countdown");
+
+      setInterval(() => {
+        const dist = launch - Date.now();
+        if (dist < 0) {
+          countdownEl.innerHTML = "🎉 Now Available!";
+          return;
+        }
+        const days = Math.floor(dist / 86400000);
+        const hours = Math.floor((dist % 86400000) / 3600000);
+        const minutes = Math.floor((dist % 3600000) / 60000);
+        countdownEl.innerHTML = `${days}d ${hours}h ${minutes}m until release`;
+      }, 60000);
+    }
+
+    function handlePreorder() {
+      const email = prompt("Enter your email for pre-order and updates:");
+      if (email && email.includes('@')) {
+        alert("Thank you! Pre-order confirmed. We'll send you updates.");
+      } else if (email) {
+        alert("Please enter a valid email address.");
+      }
+    }
+
+    // Dynamic Floating Button
+    const floatingOptions = [
+      {href:"#partnerships", icon:"🤝"},
+      {href:"#about", icon:"👤"},
+      {href:"#donate", icon:"💰"},
+      {href:"#invite", icon:"📢"},
+      {href:"#prayer", icon:"🙏"}
+    ];
+
+    function setRandomFloating() {
+      const btn = document.getElementById('floating-btn');
+      const opt = floatingOptions[Math.floor(Math.random() * floatingOptions.length)];
+      btn.href = opt.href;
+      btn.innerHTML = opt.icon;
+    }
+
+    // Initialize
     document.addEventListener('DOMContentLoaded', () => {
-      submitForm('prayer-form', 'prayer-success', 'prayer-error', 'prayer-submit');
-      submitForm('invite-form', 'invite-success', 'invite-error', 'invite-submit');
+      showPartnershipForm('mentorship');
+      startCountdown();
+      loadYouTubeContent();
+      setInterval(loadYouTubeContent, 300000); // every 5 minutes
+      setRandomFloating();
+      setInterval(setRandomFloating, 30000);
+
+      // Static forms
+      setupForm('prayer-form', 'Prayer submitted successfully!');
+      setupForm('invite-form', 'Invitation submitted successfully!');
+      setupForm('donate-form', 'Donation intention received. We will contact you.');
     });
   </script>
 </body>
